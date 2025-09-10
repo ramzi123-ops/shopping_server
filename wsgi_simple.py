@@ -1,5 +1,5 @@
-# WSGI config for PythonAnywhere deployment
-# This file should be used in the PythonAnywhere web app configuration
+# Simple WSGI config for debugging PythonAnywhere deployment
+# Use this if the main WSGI file doesn't work
 
 import os
 import sys
@@ -14,9 +14,8 @@ parent_path = '/home/ramez'
 if parent_path not in sys.path:
     sys.path.insert(0, parent_path)
 
-# Use production settings for PythonAnywhere
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'shopping_server.settings_production')
+# Use basic settings first for debugging
+os.environ['DJANGO_SETTINGS_MODULE'] = 'shopping_server.settings'
 
 from django.core.wsgi import get_wsgi_application
-
 application = get_wsgi_application()
