@@ -8,16 +8,11 @@ DEBUG = False
 # Add your PythonAnywhere domain
 ALLOWED_HOSTS = ['ramez.pythonanywhere.com', 'www.ramez.pythonanywhere.com']
 
-# Add REST Framework and CORS headers for API
-INSTALLED_APPS += [
-    'rest_framework',
-    'corsheaders',
-]
+# REST Framework and CORS headers are already included in base settings.py
+# No need to add them again here
 
-# Add CORS middleware
-MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-] + MIDDLEWARE
+# CORS middleware is already included in base settings.py
+# No need to add it again here
 
 # CORS settings for Flutter app
 CORS_ALLOWED_ORIGINS = [
